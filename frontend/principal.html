@@ -6,13 +6,15 @@
 
 <meta charset="UTF-8">
 
-<title>Página Principal</title>
+<title>Página Principal - Academia</title>
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>Sistema de Cursos</h1>
+<h1>Academia de Ginástica</h1>
 
 <hr>
 
@@ -20,17 +22,25 @@
 
 <br>
 
-<button onclick="abrirCursos()">
+<button onclick="abrirAlunos()">
 
-Cadastro de Cursos
+Gerenciar Alunos
 
 </button>
 
 <br><br>
 
-<button onclick="abrirMatriculas()">
+<button onclick="abrirPlanos()">
 
-Gestão de Matrículas
+Gerenciar Planos de Treino
+
+</button>
+
+<br><br>
+
+<button onclick="abrirAgendamentos()">
+
+Gerenciar Agendamentos
 
 </button>
 
@@ -38,47 +48,33 @@ Gestão de Matrículas
 
 <button onclick="logout()">
 
-Logout
+Sair
 
 </button>
 
+<script src="sessao.js"></script>
+
 <script>
-
-const usuario =
-
-JSON.parse(
-
-localStorage.getItem('usuario')
-
-);
-
-if(!usuario){
-
-    window.location.href='login.html';
-
-}
 
 document.getElementById('usuario').innerHTML=
 
-"Bem-vindo, "+usuario.nome;
+"Bem-vindo(a), "+usuario.nome;
 
-function abrirCursos(){
+function abrirAlunos(){
 
-    window.location.href='index.html';
-
-}
-
-function abrirMatriculas(){
-
-    window.location.href='matriculas.html';
+    window.location.href='alunos.html';
 
 }
 
-function logout(){
+function abrirPlanos(){
 
-    localStorage.removeItem('usuario');
+    window.location.href='planos.html';
 
-    window.location.href='login.html';
+}
+
+function abrirAgendamentos(){
+
+    window.location.href='agendamentos.html';
 
 }
 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Alunos - Academia</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Gerenciamento de Alunos</h1>
+
+    <button onclick="voltar()">Voltar</button>
+
+    <button onclick="logout()">Sair</button>
+
+    <hr>
+
+    <h3>Pesquisar Aluno</h3>
+
+    <input
+        type="text"
+        id="busca"
+        placeholder="Digite o nome do aluno">
+
+    <button onclick="pesquisarAluno()">
+
+        Pesquisar
+
+    </button>
+
+    <button onclick="listarAlunos()">
+
+        Listar Todos
+
+    </button>
+
+    <hr>
+
+    <h3>Cadastro</h3>
+
+    <label>Nome</label>
+
+    <br>
+
+    <input
+        type="text"
+        id="nome">
+
+    <br><br>
+
+    <label>CPF</label>
+
+    <br>
+
+    <input
+        type="text"
+        id="cpf"
+        placeholder="000.000.000-00">
+
+    <br><br>
+
+    <label>E-mail</label>
+
+    <br>
+
+    <input
+        type="email"
+        id="email">
+
+    <br><br>
+
+    <label>Telefone</label>
+
+    <br>
+
+    <input
+        type="text"
+        id="telefone"
+        placeholder="(00) 00000-0000">
+
+    <br><br>
+
+    <label>Data de Nascimento</label>
+
+    <br>
+
+    <input
+        type="date"
+        id="data_nascimento">
+
+    <br><br>
+
+    <button onclick="cadastrarAluno()">
+
+        Cadastrar
+
+    </button>
+
+    <hr>
+
+    <h2>Alunos Cadastrados</h2>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Nome</th>
+
+                <th>CPF</th>
+
+                <th>E-mail</th>
+
+                <th>Telefone</th>
+
+                <th>Nascimento</th>
+
+                <th>Ações</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tabelaAlunos">
+
+        </tbody>
+
+    </table>
+
+    <script src="sessao.js"></script>
+
+    <script src="alunos.js"></script>
+
+</body>
+
+</html>

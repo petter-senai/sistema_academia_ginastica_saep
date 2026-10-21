@@ -4,7 +4,9 @@ const connection = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'root',
-    database:'escola_saep'
+    database:'saep_db',
+    //devolve as datas como texto (ex: 2026-11-10) e não como objeto Date
+    dateStrings:true
 });
 
 connection.connect((erro) => {

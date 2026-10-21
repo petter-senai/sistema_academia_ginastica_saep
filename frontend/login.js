@@ -1,3 +1,6 @@
+//TEMPO DE EXPIRAÇÃO DA SESSÃO (30 minutos)
+const TEMPO_SESSAO = 30 * 60 * 1000;
+
 async function entrar(){
 
     const login =
@@ -6,9 +9,14 @@ async function entrar(){
     const senha =
     document.getElementById('senha').value;
 
+    const mensagem =
+    document.getElementById('mensagem');
+
+    mensagem.innerHTML = '';
+
     if(login==""){
 
-        alert("Informe o login.");
+        mensagem.innerHTML = "Informe o login.";
 
         return;
 
@@ -16,57 +24,79 @@ async function entrar(){
 
     if(senha==""){
 
-        alert("Informe a senha.");
+        mensagem.innerHTML = "Informe a senha.";
 
         return;
 
     }
 
-    const resposta = await fetch(
+    try{
 
-        'http://localhost:3025/login',
+        const resposta = await fetch(
 
-        {
+            'http://localhost:3025/login',
 
-            method:'POST',
+            {
 
-            headers:{
+                method:'POST',
 
-                'Content-Type':'application/json'
+                headers:{
 
-            },
+                    'Content-Type':'application/json'
 
-            body:JSON.stringify({
+                },
 
-                login,
+                body:JSON.stringify({
 
-                senha
+                    login,
 
-            })
+                    senha
 
-        }
+                })
 
-    );
-
-    const dados = await resposta.json();
-
-    if(dados.sucesso){
-
-        localStorage.setItem(
-
-            'usuario',
-
-            JSON.stringify(dados.usuario)
+            }
 
         );
 
-        window.location.href="principal.html";
+        const dados = await resposta.json();
+
+        if(dados.sucesso){
+
+            localStorage.setItem(
+
+                'usuario',
+
+                JSON.stringify(dados.usuario)
+
+            );
+
+            //guarda o horário em que a sessão vai expirar
+            localStorage.setItem(
+
+                'expira',
+
+                Date.now() + TEMPO_SESSAO
+
+            );
+
+            window.location.href="principal.html";
+
+        }
+
+        else{
+
+            //falha na autenticação
+            mensagem.innerHTML = dados.mensagem;
+
+            document.getElementById('senha').value = '';
+
+        }
 
     }
 
-    else{
+    catch(erro){
 
-        alert(dados.mensagem);
+        mensagem.innerHTML = "Não foi possível conectar ao servidor.";
 
     }
 

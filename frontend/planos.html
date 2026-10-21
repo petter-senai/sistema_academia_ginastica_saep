@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Planos de Treino - Academia</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Gerenciamento de Planos de Treino</h1>
+
+    <button onclick="voltar()">Voltar</button>
+
+    <button onclick="logout()">Sair</button>
+
+    <hr>
+
+    <h3>Cadastro</h3>
+
+    <label>Aluno</label>
+
+    <br>
+
+    <!-- o plano de treino sempre deve ser associado a um aluno -->
+    <select id="aluno_id">
+
+        <option value="">Selecione o aluno</option>
+
+    </select>
+
+    <br><br>
+
+    <label>Objetivo</label>
+
+    <br>
+
+    <input
+        type="text"
+        id="objetivo"
+        placeholder="Ex: Hipertrofia">
+
+    <br><br>
+
+    <label>Descrição</label>
+
+    <br>
+
+    <input
+        type="text"
+        id="descricao">
+
+    <br><br>
+
+    <label>Frequência semanal (dias)</label>
+
+    <br>
+
+    <input
+        type="number"
+        id="frequencia_semanal"
+        min="1"
+        max="7">
+
+    <br><br>
+
+    <label>Data de início</label>
+
+    <br>
+
+    <input
+        type="date"
+        id="data_inicio">
+
+    <br><br>
+
+    <button onclick="cadastrarPlano()">
+
+        Cadastrar
+
+    </button>
+
+    <hr>
+
+    <h2>Planos Cadastrados</h2>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Aluno</th>
+
+                <th>Objetivo</th>
+
+                <th>Descrição</th>
+
+                <th>Frequência</th>
+
+                <th>Início</th>
+
+                <th>Ações</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tabelaPlanos">
+
+        </tbody>
+
+    </table>
+
+    <script src="sessao.js"></script>
+
+    <script src="planos.js"></script>
+
+</body>
+
+</html>

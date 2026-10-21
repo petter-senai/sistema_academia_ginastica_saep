@@ -1,3 +1,37 @@
+/**
 *{
 background-color: rgb(196, 196, 196);
 }
+
+body{
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+input, select{
+background-color: white;
+padding: 5px;
+width: 280px;
+}
+
+button{
+background-color: rgb(30, 80, 150);
+color: white;
+border: none;
+padding: 7px 12px;
+cursor: pointer;
+}
+
+table{
+border-collapse: collapse;
+}
+
+th{
+background-color: rgb(30, 80, 150);
+color: white;
+}
+
+.erro{
+color: red;
+}
+**/
