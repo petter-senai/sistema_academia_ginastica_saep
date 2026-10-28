@@ -1,126 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>Agendamentos - Academia</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
     <h1>Gerenciamento de Agendamentos</h1>
-
     <button onclick="voltar()">Voltar</button>
-
     <button onclick="logout()">Sair</button>
-
     <hr>
 
     <h3>Agendar Aula</h3>
-
     <label>Plano de Treino (Aluno)</label>
-
     <br>
-
     <select id="plano_id">
-
         <option value="">Selecione o plano</option>
-
     </select>
-
     <br><br>
 
     <label>Personal Trainer</label>
-
     <br>
-
     <input type="text" id="personal">
-
     <br><br>
 
     <label>Data da aula</label>
-
     <br>
-
-    <input
-        type="date"
-        id="data_aula">
-
+    <input type="date" id="data_aula">
     <br><br>
 
     <label>Horário</label>
-
     <br>
-
-    <input
-        type="time"
-        id="horario">
-
+    <input type="time" id="horario">
     <br><br>
 
-    <button onclick="cadastrarAgendamento()">
-
-        Agendar
-
-    </button>
-
+    <button onclick="cadastrarAgendamento()">Agendar</button>
     <hr>
 
     <h2>Aulas Agendadas (ordenadas por data)</h2>
-
     <table border="1" cellpadding="10">
-
         <thead>
-
             <tr>
-
                 <th>ID</th>
-
                 <th>Data</th>
-
                 <th>Horário</th>
-
                 <th>Personal</th>
-
                 <th>Aluno</th>
-
                 <th>CPF</th>
-
                 <th>E-mail</th>
-
                 <th>Telefone</th>
-
                 <th>Nascimento</th>
-
                 <th>Objetivo</th>
-
                 <th>Descrição</th>
-
                 <th>Frequência</th>
-
                 <th>Início do Plano</th>
-
                 <th>Ações</th>
-
             </tr>
-
         </thead>
-
         <tbody id="tabelaAgendamentos">
-
         </tbody>
-
     </table>
 
     <script src="sessao.js"></script>
-
     <script src="agendamentos.js"></script>
-
 </body>
-
 </html>

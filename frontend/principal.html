@@ -1,85 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Página Principal - Academia</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Página Principal - Academia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <h1>Academia de Ginástica</h1>
+    <hr>
 
-<h1>Academia de Ginástica</h1>
+    <h2 id="usuario"></h2>
+    <br>
 
-<hr>
+    <button onclick="abrirAlunos()">Gerenciar Alunos</button>
+    <br><br>
 
-<h2 id="usuario"></h2>
+    <button onclick="abrirPlanos()">Gerenciar Planos de Treino</button>
+    <br><br>
 
-<br>
+    <button onclick="abrirAgendamentos()">Gerenciar Agendamentos</button>
+    <br><br>
 
-<button onclick="abrirAlunos()">
+    <button onclick="logout()">Sair</button>
 
-Gerenciar Alunos
+    <script src="sessao.js"></script>
+    <script>
+        document.getElementById('usuario').innerHTML = "Bem-vindo(a), " + usuario.nome;
 
-</button>
+        function abrirAlunos(){
+            window.location.href = 'alunos.html';
+        }
 
-<br><br>
+        function abrirPlanos(){
+            window.location.href = 'planos.html';
+        }
 
-<button onclick="abrirPlanos()">
-
-Gerenciar Planos de Treino
-
-</button>
-
-<br><br>
-
-<button onclick="abrirAgendamentos()">
-
-Gerenciar Agendamentos
-
-</button>
-
-<br><br>
-
-<button onclick="logout()">
-
-Sair
-
-</button>
-
-<script src="sessao.js"></script>
-
-<script>
-
-document.getElementById('usuario').innerHTML=
-
-"Bem-vindo(a), "+usuario.nome;
-
-function abrirAlunos(){
-
-    window.location.href='alunos.html';
-
-}
-
-function abrirPlanos(){
-
-    window.location.href='planos.html';
-
-}
-
-function abrirAgendamentos(){
-
-    window.location.href='agendamentos.html';
-
-}
-
-</script>
-
+        function abrirAgendamentos(){
+            window.location.href = 'agendamentos.html';
+        }
+    </script>
 </body>
-
 </html>

@@ -1,54 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Login - Academia</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <title>Login - Academia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <h1>Academia de Ginástica</h1>
+    <hr>
 
-<h1>Academia de Ginástica</h1>
+    <h3>Acesso ao sistema</h3>
+    <label>Login</label>
+    <br>
+    <input type="text" id="login">
+    <br><br>
 
-<hr>
+    <label>Senha</label>
+    <br>
+    <input type="password" id="senha">
+    <br><br>
 
-<h3>Acesso ao sistema</h3>
+    <button onclick="entrar()">Entrar</button>
+    <p id="mensagem" class="erro"></p>
 
-<label>Login</label>
-
-<br>
-
-<input
-type="text"
-id="login">
-
-<br><br>
-
-<label>Senha</label>
-
-<br>
-
-<input
-type="password"
-id="senha">
-
-<br><br>
-
-<button onclick="entrar()">
-
-Entrar
-
-</button>
-
-<p id="mensagem" class="erro"></p>
-
-<script src="login.js"></script>
-
+    <script src="login.js"></script>
 </body>
-
 </html>
