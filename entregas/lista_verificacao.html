@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lista de Verificação por Atividade — Academia SAEP</title>
+<style>
+  @page { size: A4 landscape; margin: 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #000; background: #fff; margin: 0; }
+  .titulo-sistema { text-align: center; margin: 4px 0 14px; }
+  .titulo-sistema strong { display: block; font-size: 22px; color: #17375e; letter-spacing: .5px; }
+  .titulo-sistema span { font-size: 11px; color: #17375e; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 14px; page-break-inside: avoid; }
+  td, th { border: 1.5px solid #000; padding: 4px 6px; vertical-align: top; }
+  .faixa { background: #17375e; color: #fff; text-align: center; font-weight: normal; font-size: 13px; padding: 5px; }
+  .faixa-sm { background: #17375e; color: #fff; text-align: center; font-weight: normal; }
+  .cab td { font-weight: bold; }
+  .atividade { font-weight: bold; text-align: left; background: #fff; color: #000; }
+  .atividade span { font-weight: normal; }
+  .col-ev { width: 36%; }
+  .col-cap { width: 12%; text-align: center; }
+  .col-peso { width: 6%; text-align: center; }
+  .col-sn { width: 6%; text-align: center; }
+  .col-just { width: 34%; }
+  tr.item td { height: 40px; }
+  tr.item td.c { text-align: center; }
+  .rodape { text-align: right; font-weight: bold; margin-top: -6px; }
+</style>
+</head>
+<body>
+
+<div class="titulo-sistema">
+  <strong>SISTEMA ACADEMIA DE GINÁSTICA — SAEP</strong>
+  <span>Alunos · Planos de Treino · Agendamentos de Aulas</span>
+</div>
+
+<table>
+  <tr><th colspan="3" class="faixa">LISTA DE VERIFICAÇÃO POR ATIVIDADE</th></tr>
+  <tr class="cab"><td colspan="2">Aluno:</td><td>CPF:</td></tr>
+  <tr class="cab"><td colspan="2">Avaliador:</td><td>Data: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hora:</td></tr>
+  <tr class="cab"><td colspan="2">Curso: Técnico Em Desenvolvimento De Sistemas</td><td style="width:30%">Edição: 2021</td></tr>
+  <tr><th colspan="3" class="faixa-sm">COMPETÊNCIA GERAL</th></tr>
+  <tr><td colspan="3">Desenvolver e programar sistemas computacionais, atendendo normas e padrão de qualidade, usabilidade, integridade e segurança da informação.</td></tr>
+</table>
+
+<!-- ATIVIDADE 1 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>1. DOCUMENTAÇÃO DE SOFTWARE</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>1.1 Identificou no mínimo 4 requisitos do sistema da academia (login com sessão, cadastro de alunos, planos de treino, agendamento de aulas com personal)?</td><td class="c">C1</td><td class="c">2</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>1.2 Identificou todos os requisitos de infraestrutura (SGBD MySQL e Linguagem de Programação JavaScript / Node.js)?</td><td class="c">C1</td><td class="c">1</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>1.3 Gerou diagrama entidade relacionamento com as tabelas usuarios, alunos, planos_treino e agendamentos?</td><td class="c">C4</td><td class="c">1</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 2 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>2. SCRIPT (CRIAÇÃO E POPULAÇÃO) BANCO DE DADOS</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>2.1 Criou as tabelas no banco de dados respeitando a chave estrangeira de cada relacionamento (planos_treino → alunos, agendamentos → planos_treino)?</td><td class="c">C4</td><td class="c">2</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>2.2 Inseriu pelo menos três registros em cada uma das tabelas criadas no banco de dados (usuarios, alunos, planos_treino, agendamentos)?</td><td class="c">C4</td><td class="c">1</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 3 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>3. FUNCIONALIDADE DE LOGIN</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>3.1 Desenvolveu a funcionalidade de autenticação do usuário redirecionando-o para a tela Principal ao inserir login e senha registrados na tabela usuarios?</td><td class="c">C7</td><td class="c">1</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>3.2 Criou uma sessão para o usuário autenticado com tempo de expiração (30 minutos)?</td><td class="c">C7</td><td class="c">3</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>3.3 Desenvolveu validação (frontend ou backend) caso haja falha de autenticação no login?</td><td class="c">C3</td><td class="c">2</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 4 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>4. FUNCIONALIDADE PRINCIPAL DO SISTEMA</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>4.1 Recuperou o nome do usuário autenticado na sessão e exibiu na funcionalidade Principal do sistema?</td><td class="c">C7</td><td class="c">2</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>4.2 Desenvolveu um meio para sair do sistema (logout encerrando a sessão)?</td><td class="c">C3</td><td class="c">1</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>4.3 Desenvolveu um meio de acessar as funcionalidades “Alunos”, “Planos de Treino” e “Agendamentos” a partir da funcionalidade "Principal"?</td><td class="c">C7</td><td class="c">1</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 5 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>5. FUNCIONALIDADE DE GERENCIAMENTO DE ALUNOS</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>5.1 Desenvolveu as funcionalidades de listar e excluir os registros de alunos cadastrados?</td><td class="c">C7</td><td class="c">2</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>5.2 Desenvolveu uma funcionalidade de busca de alunos com no mínimo um termo de busca (ex.: nome)?</td><td class="c">C3</td><td class="c">3</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>5.3 Desenvolveu a funcionalidade para a inserção de um novo aluno com persistência no banco de dados?</td><td class="c">C7</td><td class="c">2</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>5.4 Desenvolveu um meio para criptografar pelo menos a senha do usuário e o CPF do aluno no banco de dados (LGPD)?</td><td class="c">C7</td><td class="c">3</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>5.5 Desenvolveu a programação para editar um aluno já existente no banco de dados?</td><td class="c">C7</td><td class="c">3</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 6 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>6. FUNCIONALIDADE DE GERENCIAMENTO DE PLANOS DE TREINO</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>6.1 Desenvolveu a programação para a inserção de um novo plano de treino associando-o a um aluno no banco de dados?</td><td class="c">C7</td><td class="c">3</td><td></td><td></td><td></td></tr>
+</table>
+
+<!-- ATIVIDADE 7 -->
+<table>
+  <tr><th colspan="6" class="atividade">ATIVIDADE:<span>7. FUNCIONALIDADE DE GERENCIAMENTO DE AGENDAMENTOS</span></th></tr>
+  <tr>
+    <th rowspan="2" class="faixa-sm col-ev">Evidência observável</th>
+    <th rowspan="2" class="faixa-sm col-cap">Capacidade</th>
+    <th rowspan="2" class="faixa-sm col-peso">Peso</th>
+    <th colspan="2" class="faixa-sm">Escala</th>
+    <th rowspan="2" class="faixa-sm col-just">Justificativa do Não</th>
+  </tr>
+  <tr><th class="faixa-sm col-sn">Sim</th><th class="faixa-sm col-sn">Não</th></tr>
+  <tr class="item"><td>7.1 Desenvolveu a programação para listar os agendamentos de aulas ordenados por data (e horário)?</td><td class="c">C3</td><td class="c">3</td><td></td><td></td><td></td></tr>
+  <tr class="item"><td>7.2 Desenvolveu a programação para atualizar a data de um agendamento?</td><td class="c">C7</td><td class="c">2</td><td></td><td></td><td></td></tr>
+</table>
+
+<p class="rodape">Peso total: 38 pontos</p>
+
+</body>
+</html>
